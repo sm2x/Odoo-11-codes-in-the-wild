@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_product_stock_location">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div class="col-xs-12" style="width: 100%; height:100px;">
+                        <div class="col-xs-2" style="width: 15%; height:100%;">
+                            <span t-field="doc.image_medium" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-rounded&quot;}"/>
+                        </div>
+                        <div class="col-xs-10 text-left" style="padding-top:10px; height: 100%;">
+                            <h2><span t-field="doc.name"/></h2>
+                        </div>
+                    </div>
+                    <t t-set="stock_data" t-value="doc.get_data()"/>
+                    <div style="padding-top: 40px">
+                        <t t-if="stock_data">
+                            <table style="padding-top:30px" class="stockTable">
+                                <thead>
+                                    <tr>
+                                        <th>Product Name</th>
+                                        <th>Location</th>
+                                        <th>On Hand</th>
+                                        <th>Forecasting</th>
+                                        <th>Incoming</th>
+                                        <th>Outgoing</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr t-foreach="stock_data" t-as="stock">
+                                        <td><span t-field="stock.product_name"/></td>
+                                        <td><span t-field="stock.location_id.display_name"/></td>
+                                        <td><span t-field="stock.onhand"></span></td>
+                                        <td><span t-field="stock.forecast"></span></td>
+                                        <td><span t-field="stock.incoming"></span></td>
+                                        <td><span t-field="stock.outgoing"></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                         </t>
+                         <t t-if="not stock_data">
+                            <h3 style="text-align:center; padding-top: 130px;">No records found</h3>
+                         </t>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </t>
+</template>
+</odoo>

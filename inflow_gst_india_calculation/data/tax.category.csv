@@ -1,0 +1,271 @@
+name,id
+"CHAPTER: -1
+(Live animals)",Ch_1
+"CHAPTER: -2
+(Meat and edible meat offal)",Ch_2
+"CHAPTER: -3
+(Fish, crustaceans, molluscs & other aquatic invertebrates)",Ch_3
+"CHAPTER: -4
+(Dairy    produce;
+bird’s          eggs;
+natural      honey; edible products of animal origin, not elsewhere specified)",Ch_4
+"CHAPTER: -5
+(Products         of animal origin, not elsewhere specified          or included)",Ch_5
+"CHAPTER: -6
+(Live   trees   and other         plants; bulbs,  roots  and the     like;     cut
+flowers          and ornamental foliage)",Ch_6
+"CHAPTER: -7
+(Edible vegetables,  roots and tubers)",Ch_7
+"CHAPTER: -8
+(Edible fruit and nuts; peel of citrus fruit or melons)",Ch_8
+"CHAPTER: -9
+(Coffee, tea, mate and spices)
+Mate a bitter infusion of the leaves of a South American shrub.",Ch_9
+"CHAPTER: -10
+(Cereals)",Ch_10
+"CHAPTER: -11
+(Products of milling industry; malt;      starches;
+inulin; wheat gluten)",Ch_11
+"CHAPTER: -12
+(Oil   seeds   and oleaginous fruits, miscellaneous grains, seeds and fruit; industrial or medicinal  plants; straw and fodder",Ch_12
+"CHAPTER: -13
+(Lac; gums, resins and other vegetable saps and extracts)",Ch_13
+"CHAPTER: -14
+(Vegetable plaiting materials; vegetable products,        not elsewhere specified          or included)",Ch_14
+"CHAPTER: -15
+(Animal         and vegetable fats and oils    and    their cleavage products; prepared edible fats; animal or vegetable waxes)",Ch_15
+"CHAPTER: -16
+(Preparations   of meat, of fish or of crustaceans, molluscs or other aquatic vertebrates)",Ch_16
+"CHAPTER: -17
+(Sugar and sugar confectionery)",Ch_17
+"CHAPTER: -18
+(Cocoa and cocoa preparations)",Ch_18
+"CHAPTER: -19
+(Preparations   of cereals,       flour, starch   or   milk; pastrycooks’ products)",Ch_19
+"CHAPTER: -20
+(Preparations of vegetables, fruits, nuts or other parts of plants)",Ch_20
+"CHAPTER: -21
+(Miscellaneous edible preparations)",Ch_21
+"CHAPTER: -22
+(Beverages, spirit and vinegar)",Ch_22
+"CHAPTER: -23
+(Residues and waste from the food industries; prepared animal fodder)",Ch_23
+"CHAPTER: -24
+(Tobacco       and manufactured tobacco substitutes)",Ch_24
+"CHAPTER: -25
+(Salt;      sulphur; earths and stone; plastering materials,     lime and cement)",Ch_25
+"CHAPTER: -26
+(Ores, slag and ash)",Ch_26
+"CHAPTER: -27
+(Mineral fuels,
+mineral oils and
+products of their
+distillation;
+bituminous
+substances;
+mineral waxes)",Ch_27
+"CHAPTER: -28
+(Inorganic
+chemicals)",Ch_28
+"CHAPTER: -29
+(Organic
+chemicals)",Ch_29
+"CHAPTER: -30
+(Pharmaceutical
+products)",Ch_30
+"CHAPTER: -31
+(Fertilisers)",Ch_31
+"CHAPTER: -32
+(Tanning or
+dyeing extracts;
+tannins and their
+derivatives; dyes,
+pigments and
+other colouring
+matter; paints and
+varnishes; putty
+and other
+mastics; inks)",Ch_32
+"CHAPTER: -33
+(Essential oils
+and resinoids,perfumery,
+cosmetic or toilet
+preparations)",Ch_33
+"CHAPTER: -34
+(Soap, organic
+surface-active
+agents, washing
+preparations,
+lubricating
+preparations,
+artificial waxes,
+prepared waxes,
+polishing or
+scouring
+preparations,
+candles and
+similar articles,
+modelling pastes,
+dental waxes and
+dental
+preparations with
+a basis of plaster)",Ch_34
+"CHAPTER: -35
+(Aluminoidal
+substances;
+modified
+starches; glues;
+enzymes)",Ch_35
+"CHAPTER: -36
+(Explosives;
+pyrotechnic
+products;
+matches;
+pyrophoric
+alloys; certain
+combustible
+preparations)",Ch_36
+"CHAPTER: -37.
+(Photographic or
+cinematographic
+goods)",Ch_37
+"CHAPTER: -38
+(Miscellaneous
+chemical
+products)",Ch_38
+"CHAPTER: -39
+(Plastics and
+articles thereof)",Ch_39
+"CHAPTER: -40
+(Rubber and
+articles thereof)",Ch_40
+"CHAPTER: -41
+[Raw Hides and Skins (other than Fur skins) and Leather]",Ch_41
+"CHAPTER: -42
+[Articles of leather; saddlery and         harness;
+travel        goods, handbags       and similar containers; articles of animal gut   (other   than silk-worm gut)]",Ch_42
+"CHAPTER: - 43
+(Furskin         and
+artificial         fur; manufacturers thereof)",Ch_43
+"CHAPTER: -44
+(Wood and articles of wood, wood charcoal)",Ch_44
+"CHAPTER: -45
+(Cork and articles of cork)",Ch_45
+"CHAPTER: -46
+(Manufactures of straw, of esparto or of other plaiting materials; Basket-ware and wickerwork)",Ch_46
+"CHAPTER: -47
+[Pulp of wood or of other fibrous cellulosic material; recovered (waste and scrap)  paper or paperboard]",Ch_47
+"CHAPTER: -48
+(Paper            and paperboard; articles  of  paper pulp, of paper or of paperboard)",Ch_48
+"CHAPTER: -49
+(Printed     books, newspapers, pictures and other products   of   the printing industry, manuscripts, typescripts     and plans)",Ch_49
+CHAPTER: -50 (Silk),Ch_50
+"CHAPTER: -51
+(Wool, fine or coarse animal   hair;   horsehair yarn and woven
+fabric)",Ch_51
+"CHAPTER: -52
+(Cotton)",Ch_52
+"CHAPTER: -53
+(Other vegetable textile fibres; paper yarn, woven fabrics of paper yarns)",Ch_53
+"CHAPTER: -54
+(Man-made filaments;  strip  the like   of   man-made textile materials)",Ch_54
+"CHAPTER: -55
+(Manmade       staple fibres)",Ch_55
+"CHAPTER: -56
+(Wadding, felt and nonwovens; special yarns; twine, cordage, ropes and cables and articles thereof)",Ch_56
+"CHAPTER: -57
+(Carpets   and textile coverings)",Ch_57
+"CHAPTER: -58
+(Special          woven fabrics; tufted textile fabrics;              lace; tapestries; trimmings; embroidery)",Ch_58
+"CHAPTER: -59
+(Impregnated, coated,   covered   or laminated        textile
+fabrics; textile articles of a kind suitable for industrial use)",Ch_59
+"CHAPTER: -60
+(Knitted or crocheted fabrics)",Ch_60
+"CHAPTER: -61
+(Articles of apparel and clothing accessories, knitted or crocheted)",Ch_61
+"CHAPTER: -62
+(Articles of apparel and clothing accessories, not knitted or crocheted)",Ch_62
+"CHAPTER: -63
+(Other made up textile articles, sets, worn clothing and worn textile articles; rags)",Ch_63
+"CHAPTER: -64
+(Footwear gaiters and the like; parts of such articles)",Ch_64
+"CHAPTER: -65
+(Headgear      and parts thereof)",Ch_65
+"CHAPTER: -66
+(Umbrellas,    sun umbrellas, walking-sticks, seat-sticks, whips,       riding- crops   and   parts thereof)",Ch_66
+"CHAPTER: -67
+(Prepared feathers          and down and articles made  of  feather or   of   down   - artificial flowers; articles of human hair)",Ch_67
+"CHAPTER: -68
+(Articles of stone, plaster, cement, asbestos, mica or similar material)",Ch_68
+"CHAPTER: -69
+(Ceramic products)",Ch_69
+"CHAPTER: -70
+(Glass and
+glassware)",Ch_70
+"CHAPTER: -72
+(Iron and steel)",Ch_71
+"CHAPTER: -73
+(Articles  of  iron or steel)",Ch_72
+"CHAPTER: -74
+(Copper         and articles thereof)",Ch_73
+"CHAPTER: -75
+(Nickel          and articles thereof)",Ch_74
+"CHAPTER: -76
+(Aluminium   and articles thereof)",Ch_75
+"CHAPTER: -78
+(Lead and articles thereof)",Ch_76
+"CHAPTER: -79
+(Zinc and articles thereof)",Ch_77
+"CHAPTER: -80                                   (Tin  and  articles
+thereof)",Ch_78
+"CHAPTER: -81
+(Other base metals; cermets; articles thereof)",Ch_79
+"CHAPTER: -82
+(Tools, implements, cutlery,     spoons and forks of base metal;          parts thereof   of   base metal)",Ch_80
+"CHAPTER: -83
+(Miscellaneous articles   of   base metal)",Ch_81
+"CHAPTER: -84
+(Nuclear reactors, boilers, machinery     and mechanical appliances;  parts thereof)",Ch_82
+"CHAPTER: -85
+(Electrical machinery     and
+equipment and parts thereof; sound recorders and re-producers, television image and sound recorders and reproducers, and parts              and
+accessories of such articles)",Ch_83
+"CHAPTER: -86
+[Railway          or tramway locomotives, rolling-stocks and parts        thereof; railway             or
+tramway      track
+fixtures          and",Ch_84
+"CHAPTER: -87
+(Vehicles other than railway or tramway rolling- stocks, and parts and accessories thereof)",Ch_85
+"CHAPTER: -88
+(Aircraft; spacecraft      and parts thereof)",Ch_86
+"CHAPTER: -89
+(Ships, boats and floating structures)",Ch_87
+"CHAPTER: -90
+(Optical, photographic, cinematographic, measuring, checking, precision, medical            or surgical instruments    and apparatus;    parts and    accessories thereof)",Ch_88
+"CHAPTER: -91
+(Clocks and watches and parts thereof)",Ch_89
+"CHAPTER: -92
+(Musical instruments; parts and    accessories of such articles)",Ch_90
+"CHAPTER: -93
+(Arms and
+ammunition;
+parts and
+accessories
+thereof)",Ch_91
+"CHAPTER: -94 
+(Furniture; bedding, mattresses, mattress supports, cushions        and similar      stuffed furnishings; lamps             and lighting   fittings,
+not       elsewhere specified          or included; illuminated signs, illuminated
+name-plates   and the                like; prefabricated buildings)",Ch_92
+"CHAPTER: -95
+(Toys, games and sports requisites; parts and
+accessories thereof)",Ch_93
+"CHAPTER: -96
+(Miscellaneous manufactured articles)",Ch_94
+"CHAPTER: -97
+(Works of art, collectors' piece and antiques)",Ch_95
+"CHAPTER: -98
+(Project  imports, laboratory chemicals,
+passengers’
+baggage,
+personal importation,  ship stores)",Ch_96

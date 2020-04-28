@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--     
+ -*- coding: utf-8 -*-
+ Odoo, Open Source GST Indian Compliance.
+ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). 
+-->
+
+		<odoo>
+			<data>
+				<!-- print action for account invoice -->
+				<template id="report_invoice_inherit" inherit_id="account.report_invoice" >
+					<xpath expr="//t[@t-call='web.html_container']" position="replace">
+						<t t-call="web.html_container">
+							<t t-foreach="docs" t-as="o">
+								<t t-call="inflow_gst_india_calculation.gst_report_invoice_document" t-lang="o.partner_id.lang"
+									/>
+							</t>
+						</t>
+					</xpath>
+				</template>
+
+				<!-- print action for account invoice duplicate-->
+				<template id="account_gst_invoice_report_duplicate">
+					<t t-call="web.html_container">
+						<t t-foreach="docs" t-as="o">
+							<t t-call="inflow_gst_india_calculation.account_gst_invoice_report_duplicate_document" t-lang="o.partner_id.lang"/>
+						</t>
+					</t>
+				</template>
+
+				<!-- print action for account invoice triplicate-->
+				<template id="account_gst_invoice_report_triplicate">
+					<t t-call="web.html_container">
+						<t t-foreach="docs" t-as="o">
+							<t t-call="inflow_gst_india_calculation.account_gst_invoice_report_triplicate_document" t-lang="o.partner_id.lang"/>
+						</t>
+					</t>
+				</template>
+
+
+				<!-- print action for account invoice duplicate
+				<template id="account.account_invoice_report_duplicate" inherit_id="gst_india_calculation.gst_report_invoice_document"
+					primary="True">
+					<xpath expr="//h2" position="replace">
+						<h2>
+							<span>Duplicate</span>
+							<span t-if="o.type == 'out_refund'">refund</span>
+							<span t-if="o.type == 'out_invoice'">invoice</span>
+							<span t-field="o.number" />
+						</h2>
+					</xpath>
+				</template>
+				
+				<!- print action for sale order report
+				<template id="report_saleorder_inherit" inherit_id="sale.report_saleorder" >
+					<xpath expr="//t[@t-call='web.html_container']" position="replace">
+						<t t-call="web.html_container">
+							<t t-foreach="docs" t-as="o">
+								<t t-call="gst_india_calculation.gst_report_sale_invoice_document" t-lang="o.partner_id.lang"
+									/>
+							</t>
+						</t>
+					</xpath>
+				</template>
+				
+				<!- print action for purchase order report
+				<template id="report_purchaseorder_inherit" inherit_id="purchase.report_purchaseorder"
+					>
+					<xpath expr="//t[@t-call='web.html_container']" position="replace">
+						<t t-call="web.html_container">
+							<t t-foreach="docs" t-as="o">
+								<t t-call="gst_india_calculation.gst_report_purchase_invoice_document" t-lang="o.partner_id.lang"
+									/>
+							</t>
+						</t>
+					</xpath>
+				</template>
+				
+				<!- print action for purchase order quotation
+				<template id="report_purchasequotation_inherit" inherit_id="purchase.report_purchasequotation"
+					>
+					<xpath expr="//t[@t-call='web.html_container']" position="replace">
+						<t t-call="web.html_container">
+							<t t-foreach="docs" t-as="o">
+								<t t-call="gst_india_calculation.gst_report_purchase_invoice_document" t-lang="o.partner_id.lang"
+									/>
+							</t>
+						</t>
+					</xpath>
+				</template>
+				-->
+
+			</data>
+		</odoo>
+      

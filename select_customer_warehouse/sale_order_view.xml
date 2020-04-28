@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   		 <record id="sale_order_inherit_view" model="ir.ui.view">
+         <field name="name">sale.order.inherit.view</field>
+         <field name="model">sale.order</field>
+	     <field name="inherit_id" ref="sale.view_order_form"/>
+         <field name="arch" type="xml">
+             <xpath expr="//field[@name='partner_id']" position="replace">
+                        <field name="partner_id" domain="['|', ('customer','=',True),('state', '=','confirm'), ('customer','=',True),('state', '=','approve')]" context="{'search_default_customer':1, 'show_address': 1}" options="{&quot;always_reload&quot;: True}"/>
+             </xpath>
+             <!--<xpath expr="//button[@name='action_confirm']" position="replace">
+                        <button name="action_confirm" id="action_confirm" string="Confirm Sale" class="btn-primary" type="object" attrs="{'invisible': ['|',('state', 'not in', ['sent']),('partner_id.state', 'not in', ['approve'])]}"/>
+             </xpath>-->
+
+      </field>
+      </record>
+      
+      <record id="purchase_order_inherit_view" model="ir.ui.view">
+         <field name="name">purhase.order.inherit.view</field>
+         <field name="model">purchase.order</field>
+	     <field name="inherit_id" ref="purchase.purchase_order_form"/>
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="replace">
+                   <field name="partner_id" context="{'search_default_supplier':1, 'default_supplier':1, 'default_customer':0}" domain="[('supplier','=',True),('state', '=','done')]"/>
+            </xpath>
+      </field>
+      </record>
+      
+       <record id="stock_picking_inherit_view" model="ir.ui.view">
+         <field name="name">stock.picking.inherit.view</field>
+         <field name="model">stock.picking</field>
+	     <field name="inherit_id" ref="stock.view_picking_form"/>
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="replace">
+                        <field name="partner_id" domain="[('state', '=','done')]"/>
+            </xpath>
+      </field>
+      </record>
+      
+       <record id="account_invoice_inherit_view" model="ir.ui.view">
+         <field name="name">account.invoice.inherit.view</field>
+         <field name="model">account.invoice</field>
+	     <field name="inherit_id" ref="account.invoice_form"/>
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="replace">
+            
+                    <field string="Customer" name="partner_id" on_change="onchange_partner_id(type, partner_id, date_invoice, payment_term, partner_bank_id, company_id, context)" context="{'search_default_customer':1, 'show_address': 1}" options="{&quot;always_reload&quot;: True}" domain="[('customer', '=', True),('state', '=','approve')]"/>
+            
+            </xpath>
+      </field>
+      </record>
+<!--      -->
+       <record id="account_voucher_inherit_view" model="ir.ui.view">
+         <field name="name">account.voucher.inherit.view</field>
+         <field name="model">account.voucher</field>
+	     <field name="inherit_id" ref="account_voucher.view_sale_receipt_form"/>
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="replace">
+            
+                     
+                     <field name="partner_id" domain="[('customer','=',True),('state', '=','approve')]" string="Customer" context="{'search_default_customer':1, 'show_address': 1}" options="{&quot;always_reload&quot;: True}"/>
+            
+            </xpath>
+      </field>
+      </record>
+      
+      <record id="account_sup_invoice_inherit_view" model="ir.ui.view">
+         <field name="name">account.sup.invoice.inherit.view</field>
+         <field name="model">account.invoice</field>
+	     <field name="inherit_id" ref="account.invoice_supplier_form"/>
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="replace">
+            
+                      <field string="Customer" name="partner_id" on_change="onchange_partner_id(type, partner_id, date_invoice, payment_term, partner_bank_id, company_id, context)" context="{'search_default_customer':1, 'show_address': 1}" options="{&quot;always_reload&quot;: True}" domain="[('supplier', '=', True),('state', '=','approve')]"/>
+            
+            </xpath>
+      </field>
+      </record>
+      
+      <record id="account_sup_pay_inherit_view" model="ir.ui.view">
+         <field name="name">account.sup.pay.invoice.inherit.view</field>
+         <field name="model">account.voucher</field>
+	     <field name="inherit_id" ref="account_voucher.view_purchase_receipt_form"/>
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="replace">
+            
+                 <field name="partner_id" domain="[('supplier','=',True),('state', '=','approve')]" string="Vendor" context="{'default_customer': 0, 'search_default_supplier': 1, 'default_supplier': 1}"/>
+                            <field name="pay_now" required="1"/>
+            
+            
+            </xpath>
+      </field>
+      </record>
+      
+      <record id="product_supplier_info_inherit_view" model="ir.ui.view">
+         <field name="name">product.supplier.inherit.view</field>
+         <field name="model">product.supplierinfo</field>
+	     <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="replace">
+                        <field name="name" context="{'default_customer': 0, 'search_default_supplier': 1, 'default_supplier': 1}" domain="[('state', '=','approve'),('supplier', '=',True)]"/>
+            </xpath>
+      </field>
+      </record>
+</odoo>
+
+

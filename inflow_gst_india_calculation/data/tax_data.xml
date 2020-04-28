@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--     
+ -*- coding: utf-8 -*-
+ Odoo, Open Source GST Indian Compliance.
+ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). 
+-->
+	<odoo>
+     <data noupdate="1">
+    
+    	 <!-- input GST Tax -->
+    	 
+    	 <!-- cgst -->
+        <record id="tax_cinput_1" model="account.tax">
+            <field name="name">Input CGST 0% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.0</field>
+            <field name="cgst">True</field>
+        </record>
+        <record id="tax_cinput_2" model="account.tax">
+            <field name="name">Input CGST 0.125% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.125</field>
+             <field name="cgst">True</field>
+        </record>
+        <record id="tax_cinput_3" model="account.tax">
+             <field name="name">Input CGST 1.5% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">1.5</field>
+             <field name="cgst">True</field>
+        </record>
+         <record id="tax_cinput_4" model="account.tax">
+             <field name="name">Input CGST 2.5% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">2.5</field>
+             <field name="cgst">True</field>
+        </record>
+         <record id="tax_cinput_5" model="account.tax">
+             <field name="name">Input CGST 6% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">6.0</field>
+             <field name="cgst">True</field>
+        </record>
+         <record id="tax_cinput_6" model="account.tax">
+             <field name="name">Input CGST 9% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">9.0</field>
+             <field name="cgst">True</field>
+        </record>
+         <record id="tax_cinput_7" model="account.tax">
+             <field name="name">Input CGST 14% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">14.0</field>
+             <field name="cgst">True</field>
+        </record>
+        
+        <!-- sgst -->
+        
+         <record id="tax_sinput_1" model="account.tax">
+            <field name="name">Input SGST 0% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.0</field>
+             <field name="sgst">True</field>
+        </record>
+        <record id="tax_sinput_2" model="account.tax">
+            <field name="name">Input SGST 0.125% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.125</field>
+            <field name="sgst">True</field>
+        </record>
+        <record id="tax_sinput_3" model="account.tax">
+             <field name="name">Input SGST 1.5% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">1.5</field>
+            <field name="sgst">True</field>
+        </record>
+         <record id="tax_sinput_4" model="account.tax">
+             <field name="name">Input SGST 2.5% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">2.5</field>
+            <field name="sgst">True</field>
+        </record>
+         <record id="tax_sinput_5" model="account.tax">
+             <field name="name">Input SGST 6% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">6.0</field>
+            <field name="sgst">True</field>
+        </record>
+         <record id="tax_sinput_6" model="account.tax">
+             <field name="name">Input SGST 9% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">9.0</field>
+            <field name="sgst">True</field>
+        </record>
+         <record id="tax_sinput_7" model="account.tax">
+             <field name="name">Input SGST 14% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">14.0</field>
+            <field name="sgst">True</field>
+        </record>
+        
+         <!-- igst -->
+        
+         <record id="tax_iinput_1" model="account.tax">
+            <field name="name">Input IGST 0% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.0</field>
+            <field name="igst">True</field>
+        </record>
+        <record id="tax_iinput_2" model="account.tax">
+            <field name="name">Input IGST 0.25% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.25</field>
+             <field name="igst">True</field>
+        </record>
+        <record id="tax_iinput_3" model="account.tax">
+             <field name="name">Input IGST 3% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">3.0</field>
+             <field name="igst">True</field>
+        </record>
+         <record id="tax_iinput_4" model="account.tax">
+             <field name="name">Input IGST 5% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">5.0</field>
+             <field name="igst">True</field>
+        </record>
+         <record id="tax_iinput_5" model="account.tax">
+             <field name="name">Input IGST 12% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">12.0</field>
+             <field name="igst">True</field>
+        </record>
+         <record id="tax_iinput_6" model="account.tax">
+             <field name="name">Input IGST 18% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">18.0</field>
+             <field name="igst">True</field>
+        </record>
+         <record id="tax_iinput_7" model="account.tax">
+             <field name="name">Input IGST 28% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">28.0</field>
+             <field name="igst">True</field>
+        </record>
+        
+    	 <!-- output GST Tax -->
+    	     <!-- cgst-->
+    	<record id="tax_coutput_1" model="account.tax">
+            <field name="name">Output CGST 0% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.0</field>
+            <field name="cgst">True</field>
+        </record>
+        <record id="tax_coutput_2" model="account.tax">
+            <field name="name">Output CGST 0.125% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.125</field>
+             <field name="cgst">True</field>
+        </record>
+        <record id="tax_coutput_3" model="account.tax">
+             <field name="name">Output CGST 1.5% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">1.5</field>
+             <field name="cgst">True</field>
+        </record>
+         <record id="tax_coutput_4" model="account.tax">
+             <field name="name">Output CGST 2.5% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">2.5</field>
+             <field name="cgst">True</field>
+        </record>
+         <record id="tax_coutput_5" model="account.tax">
+             <field name="name">Output CGST 6% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">6.0</field>
+             <field name="cgst">True</field>
+        </record>
+         <record id="tax_coutput_6" model="account.tax">
+             <field name="name">Output CGST 9% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+             <field name="cgst">True</field>
+             <field name="amount">9.0</field>
+        </record>
+         <record id="tax_coutput_7" model="account.tax">
+             <field name="name">Output CGST 14% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">14.0</field>
+             <field name="cgst">True</field>
+        </record>
+    
+    <!-- SGST-->
+    	<record id="tax_soutput_1" model="account.tax">
+            <field name="name">Output SGST 0% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.0</field>
+            <field name="sgst">True</field>
+        </record>
+        <record id="tax_soutput_2" model="account.tax">
+            <field name="name">Output SGST 0.125% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.125</field>
+            <field name="sgst">True</field>
+        </record>
+        <record id="tax_soutput_3" model="account.tax">
+             <field name="name">Output SGST 1.5% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">1.5</field>
+            <field name="sgst">True</field>
+        </record>
+         <record id="tax_soutput_4" model="account.tax">
+             <field name="name">Output SGST 2.5% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">2.5</field>
+            <field name="sgst">True</field>
+        </record>
+         <record id="tax_soutput_5" model="account.tax">
+             <field name="name">Output SGST 6% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">6.0</field>
+            <field name="sgst">True</field>
+        </record>
+         <record id="tax_soutput_6" model="account.tax">
+             <field name="name">Output SGST 9% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">9.0</field>
+            <field name="sgst">True</field>
+        </record>
+         <record id="tax_soutput_7" model="account.tax">
+             <field name="name">Output SGST 14% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">14.0</field>
+            <field name="sgst">True</field>
+        </record>
+        
+           <!-- igst--> 
+        <record id="tax_Ioutput_1" model="account.tax">
+            <field name="name">Output IGST 0% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.0</field>
+             <field name="igst">True</field>
+        </record>
+        <record id="tax_Ioutput_2" model="account.tax">
+            <field name="name">Output IGST 0.25% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0.25</field>
+             <field name="igst">True</field>
+        </record>
+        <record id="tax_Ioutput_3" model="account.tax">
+             <field name="name">Output IGST 3% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">3.0</field>
+             <field name="igst">True</field>
+        </record>
+         <record id="tax_Ioutput_4" model="account.tax">
+             <field name="name">Output IGST 5% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">5.0</field>
+             <field name="igst">True</field>
+        </record>
+         <record id="tax_Ioutput_5" model="account.tax">
+             <field name="name">Output IGST 12% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">12.0</field>
+             <field name="igst">True</field>
+        </record>
+         <record id="tax_Ioutput_6" model="account.tax">
+             <field name="name">Output IGST 18% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">18.0</field>
+             <field name="igst">True</field>
+        </record>
+         <record id="tax_Ioutput_7" model="account.tax">
+             <field name="name">Output IGST 28% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">28.0</field>
+             <field name="igst">True</field>
+        </record>
+        
+      <!--input GST gROUP
+        
+        <record id="tax_inpout_gst_1" model="account.tax">
+            <field name="name">Input GST 0% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">group</field>
+             <field name="amount">0.0</field>
+             <field name="input">True</field>
+            <field name="children_tax_ids" eval="[(6,0, (ref('tax_cinput_1'),ref('tax_sinput_1')))]"></field>
+        </record>
+      <record id="tax_input_gst_2" model="account.tax">
+            <field name="name">Input GST 0.25% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount">0.25</field>
+            <field name="amount_type">group</field>
+            <field name="input">True</field>
+           <field name="children_tax_ids" eval="[(6,0, (ref('tax_cinput_2'),ref('tax_sinput_2')))]"></field>
+        </record>
+          <record id="tax_input_gst_3" model="account.tax">
+             <field name="name">Input GST 3% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount">3.0</field>
+            <field name="amount_type">group</field>
+            <field name="input">True</field>
+         <field name="children_tax_ids" eval="[(6,0, (ref('tax_cinput_3'),ref('tax_sinput_3')))]"></field>
+        </record>
+         <record id="tax_input_gst_4" model="account.tax">
+             <field name="name">Input GST 5% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount">5.0</field>
+            <field name="amount_type">group</field>
+            <field name="input">True</field>
+            <field name="children_tax_ids" eval="[(6,0, (ref('tax_cinput_4'),ref('tax_sinput_4')))]"></field>
+        </record>
+         <record id="tax_input_gst_5" model="account.tax">
+             <field name="name">Input GST 12% </field>
+             <field name="amount">12.0</field>
+            <field name="type_tax_use">sale</field>
+            <field name="input">True</field>
+            <field name="amount_type">group</field>
+            <field name="children_tax_ids" eval="[(6,0, (ref('tax_cinput_5'),ref('tax_sinput_5')))]"></field>
+        </record>
+         <record id="tax_input_gst_6" model="account.tax">
+             <field name="name">Input GST 18% </field>
+             <field name="amount">18.0</field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount_type">group</field>
+            <field name="input">True</field>
+            <field name="children_tax_ids" eval="[(6,0, (ref('tax_cinput_6'),ref('tax_sinput_6')))]"></field>
+        </record>
+         <record id="tax_input_gst_7" model="account.tax">
+             <field name="name">Input GST 28% </field>
+            <field name="type_tax_use">sale</field>
+            <field name="amount">28.0</field>
+            <field name="input">True</field>
+            <field name="amount_type">group</field>
+            <field name="children_tax_ids" eval="[(6,0, (ref('tax_cinput_7'),ref('tax_sinput_7')))]"></field>
+        </record>
+        
+        
+        <record id="tax_output_gst_1" model="account.tax">
+            <field name="name">Outout GST 0% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">group</field>
+             <field name="amount">0.0</field>
+             <field name="output">True</field>
+            <field name="children_tax_ids" eval="[(6,0, (ref('tax_coutput_1'),ref('tax_soutput_1')))]"></field>
+        </record>
+      <record id="tax_output_gst_2" model="account.tax">
+            <field name="name">Outout GST 0.25% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">.025</field>
+            <field name="amount_type">group</field>
+             <field name="output">True</field>
+           <field name="children_tax_ids" eval="[(6,0, (ref('tax_coutput_2'),ref('tax_soutput_2')))]"></field>
+        </record>
+        <record id="tax_output_gst_3" model="account.tax">
+             <field name="name">Outout GST 3% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">3.0</field>
+            <field name="amount_type">group</field>
+             <field name="output">True</field>
+         <field name="children_tax_ids" eval="[(6,0, (ref('tax_coutput_3'),ref('tax_soutput_3')))]"></field>
+        </record>
+         <record id="tax_output_gst_4" model="account.tax">
+             <field name="name">Outout GST 5% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">5.0</field>
+             <field name="output">True</field>
+            <field name="amount_type">group</field>
+            <field name="children_tax_ids" eval="[(6,0, (ref('tax_coutput_4'),ref('tax_soutput_4')))]"></field>
+        </record>
+         <record id="tax_output_gst_5" model="account.tax">
+             <field name="name">Outout GST 12% </field>
+             <field name="amount">12.0</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount_type">group</field>
+             <field name="output">True</field>
+            <field name="children_tax_ids" eval="[(6,0, (ref('tax_coutput_5'),ref('tax_soutput_5')))]"></field>
+        </record>
+         <record id="tax_output_gst_6" model="account.tax">
+             <field name="name">Outout GST 18% </field>
+             <field name="amount">18.0</field>
+            <field name="type_tax_use">purchase</field>
+             <field name="output">True</field>
+            <field name="amount_type">group</field>
+            <field name="children_tax_ids" eval="[(6,0, (ref('tax_coutput_6'),ref('tax_soutput_6')))]"></field>
+        </record>
+         <record id="tax_output_gst_7" model="account.tax">
+             <field name="name">Outout GST 28% </field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">28.0</field>
+             <field name="output">True</field>
+            <field name="amount_type">group</field>
+            <field name="children_tax_ids" eval="[(6,0, (ref('tax_coutput_7'),ref('tax_soutput_7')))]"></field>
+        </record>-->
+        
+        
+    </data>
+ </odoo>

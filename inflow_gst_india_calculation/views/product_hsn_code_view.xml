@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--     
+ -*- coding: utf-8 -*-
+ Odoo, Open Source GST Indian Compliance.
+ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). 
+-->
+
+			<odoo>
+				<data>
+					<!-- Tax Category Form-->
+					<record id="view_tax_category_form" model="ir.ui.view">
+						<field name="name">tax.category.form</field>
+						<field name="model">tax.category</field>
+						<field name="arch" type="xml">
+							<form string="TGST Chapter">
+								<group>
+									<field name="name"/>
+								</group>
+							</form>
+						</field>
+					</record>
+					
+					<!-- Tax Category Tree-->
+					<record id="view_tax_category_tree" model="ir.ui.view">
+						<field name="name">tax.category.tree</field>
+						<field name="model">tax.category</field>
+						<field name="arch" type="xml">
+							<tree string="GST Chapter">
+								<field name="name"/>
+							</tree>
+						</field>
+					</record>
+					
+					<!-- Tax Category Action-->
+					<record id="action_tax_category_form" model="ir.actions.act_window">
+						<field name="name">GST Chapter</field>
+						<field name="res_model">tax.category</field>
+						<field name="view_type">form</field>
+						<field name="view_mode">tree,form</field>
+					</record>
+					
+					<!-- Tax Category MenuItem-->
+					<menuitem id="menu_action_gst_form" parent="account.menu_finance_configuration" name="GST"
+						sequence="4" />
+					
+					<!-- HSN Form-->
+					<record id="view_product_hsn_form" model="ir.ui.view">
+						<field name="name">product.hsn.form</field>
+						<field name="model">product.hsn</field>
+						<field name="arch" type="xml">
+							<form string="Tax Category">
+								<sheet>
+									<group>
+										<field name="name"/>
+										<field name="tax_categ_id"/>
+										<field name="description"/>
+										<field name="rate"/>
+									</group>
+								</sheet>
+							</form>
+						</field>
+					</record>
+					
+					<!-- HSN Tree-->
+					<record id="view_product_hsn_tree" model="ir.ui.view">
+						<field name="name">product.hsn.tree</field>
+						<field name="model">product.hsn</field>
+						<field name="arch" type="xml">
+							<tree string="Tax Category">
+								<field name="name"/>
+								<field name="tax_categ_id"/>
+							</tree>
+						</field>
+					</record>
+					
+					<!-- HSN Action-->
+					<record id="action_product_hsn_form" model="ir.actions.act_window">
+						<field name="name">Product HSN</field>
+						<field name="res_model">product.hsn</field>
+						<field name="view_type">form</field>
+						<field name="view_mode">tree,form</field>
+					</record>
+					
+					<!-- HSN MenuItem-->
+					<menuitem action="action_product_hsn_form" id="menu_action_product_hsn_form" parent="menu_action_gst_form"
+						name="Product HSN" />
+					
+					<menuitem id="menu_action_tax_category_form" action="action_tax_category_form" parent="menu_action_gst_form"
+						name="GST Chapter" />
+					
+					<!--inherit view product -->
+					<record id="product_template_inherit_form_view" model="ir.ui.view">
+						<field name="name">product.template.form</field>
+						<field name="model">product.template</field>
+						<field name="inherit_id" ref="product.product_template_form_view" />
+						<field name="arch" type="xml">
+							<xpath expr="//field[@name='taxes_id']" position="after">
+								<field name="tax_category_id"/>
+								<field name="hsn_id" domain="[('tax_categ_id','=',tax_category_id )]" context="{'default_search_tax_categ_id':tax_category_id
+									,'default_tax_categ_id': tax_category_id}" />
+							</xpath>
+						</field>
+					</record>
+				</data>
+			</odoo>

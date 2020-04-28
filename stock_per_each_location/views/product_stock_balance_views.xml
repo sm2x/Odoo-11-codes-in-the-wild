@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_stock_location_form_view" model="ir.ui.view">
+        <field name="name">Product Stock Balance</field>
+        <field name="model">product.stock.balance</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="location_id"/>
+                            <field name="onhand"/>
+                            <field name="forecast"/>
+                        </group>
+                        <group>
+                            <field name="incoming"/>
+                            <field name="outgoing"/>
+                            <field name="product_name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

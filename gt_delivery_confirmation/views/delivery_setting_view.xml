@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record model="ir.ui.view" id="customer_emails_notify_name_tree_view">
+      <field name="name">Customer Information </field>
+      <field name="model">stock.warehouse</field>
+      <field name="inherit_id" ref="stock.view_warehouse"/>
+      <field name="arch" type="xml">
+      <xpath expr="//field[@name='code']" position="after"> 
+          	<field name="send_email"/>
+          	<field name="send_auto_mail"/>
+      		<field name="email_temp"/>
+      </xpath> 
+      </field>
+    </record>
+    </data>
+</odoo>

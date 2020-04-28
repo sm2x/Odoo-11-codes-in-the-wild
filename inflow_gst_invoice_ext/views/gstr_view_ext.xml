@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="gstr1_view_extension">
+          <field name="name">GSTR1 View Extension</field>
+          <field name="model">gstr1.tool</field>
+          <field name="inherit_id" ref="gst_invoice.gstr1_tool_form"/>
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='date_to']" position="after">
+                    <field name="account_journal_id" domain="[('type', '=', 'sale'),('active', '=', True)]" />
+              </xpath>
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="gstr2_view_extension">
+          <field name="name">GSTR2 View Extension</field>
+          <field name="model">gstr1.tool</field>
+          <field name="inherit_id" ref="gst_invoice.gstr2_tool_form"/>
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='date_to']" position="after">
+                    <field name="account_journal_id" domain="[('type', '=', 'purchase'),('active', '=', True)]" />
+              </xpath>
+          </field>
+        </record>
+
+    </data>
+</odoo>

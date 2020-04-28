@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_template_form_view_inherit_stock_location" model="ir.ui.view">
+        <field name="name">product.template.stock.property.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='inventory']" position="inside">
+                <separator string="Stocks Balance By Location" attrs="{'invisible': [('type', '!=', 'product')]}"/>
+                <field name="product_stock_location" attrs="{'invisible': [('type', '!=', 'product')]}">
+                    <tree>
+                        <field name="location_id"/>
+                        <field name="onhand"/>
+                        <field name="forecast"/>
+                        <field name="incoming"/>
+                        <field name="outgoing"/>
+                    </tree>
+                </field>
+            </xpath>
+        </field>
+    </record>
+</odoo>

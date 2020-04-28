@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--     
+ -*- coding: utf-8 -*-
+ Odoo, Open Source GST Indian Compliance.
+ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). 
+-->
+<odoo>
+	<data>
+
+		<report id="all_account_invoices"
+				model="account.invoice"
+				string="All Invoice"
+				report_type="qweb-pdf"
+				name="inflow_gst_india_calculation.all_three_invoice"
+				file="inflow_gst_india_calculation.all_three_invoice"
+            	print_report_name="(object._get_printed_report_name())"
+		/>
+
+		<report id="account.account_invoices"
+				model="account.invoice"
+				string="Invoice"
+				report_type="qweb-pdf"
+				name="account.report_invoice"
+				file="account.report_invoice"
+		/>
+
+		<report id="account_invoice_report_duplicate"
+				model="account.invoice"
+				string="Invoice (Duplicate)"
+				report_type="qweb-pdf"
+				name="inflow_gst_india_calculation.account_gst_invoice_report_duplicate"
+				file="inflow_gst_india_calculation.account_gst_invoice_report_duplicate"
+		/>
+
+		<report id="account_invoice_report_triplicate"
+				model="account.invoice"
+				string="Invoice (Triplicate)"
+				report_type="qweb-pdf"
+				name="inflow_gst_india_calculation.account_gst_invoice_report_triplicate"
+				file="inflow_gst_india_calculation.account_gst_invoice_report_triplicate"
+		/>
+
+	</data>
+</odoo>

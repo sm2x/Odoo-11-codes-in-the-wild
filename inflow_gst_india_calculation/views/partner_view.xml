@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--     
+ -*- coding: utf-8 -*-
+ Odoo, Open Source GST Indian Compliance.
+ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). 
+-->
+<odoo>
+    <data>
+      <record id="state_inherit_form_view" model="ir.ui.view">
+            <field name="name">res.country.state.form</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_form" />
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='code']" position="after">
+            		<field name="gst_code"/>
+            	</xpath>
+            </field>
+     </record>
+ </data>
+ </odoo>
+     

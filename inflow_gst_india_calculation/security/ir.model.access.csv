@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_hsn,product.hsn,model_product_hsn,,1,1,1,1
+access_tax_category,tax.category,model_tax_category,,1,1,1,1

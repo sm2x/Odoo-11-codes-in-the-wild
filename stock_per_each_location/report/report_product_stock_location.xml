@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+            id="report_product_stock_location_final"
+            string="Stock Location"
+            model="product.template"
+            report_type="qweb-pdf"
+            name="stock_per_each_location.report_product_stock_location"
+            file="stock_per_each_location.report_product_stock_location"/>
+
+    </data>
+</odoo>

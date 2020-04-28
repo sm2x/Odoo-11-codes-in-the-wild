@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bank_statement_import_form_view" model="ir.ui.view">
+        <field name="name">import.account.bank.statement.form.view</field>
+        <field name="model">import.account.bank.statement</field>
+        <field name="arch" type="xml">
+            <form string="Import Bank Statements">
+                <group>
+                    <group>
+                        <field name="import_option" widget="radio"/>
+                        <field name="file"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="import_bank_statements" string="Import" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_bank_statement_import" model="ir.actions.act_window">
+        <field name="name">Import Bank Statements</field>
+        <field name="res_model">import.account.bank.statement</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

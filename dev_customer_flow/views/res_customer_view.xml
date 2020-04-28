@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+<!--        kanban view-->
+    
+        <record id="res_partner_flow_kanban_view" model="ir.ui.view">
+         <field name="name">res.partner.flow.kanban.view</field>
+         <field name="model">res.partner</field>
+	     <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='mobile']" position="after">
+                <field name="state"/>
+            </xpath>
+         
+            <xpath expr="//div[hasclass('oe_kanban_partner_links')]" position="after">
+                         <field name="state" widget="label_selection" options="{'classes': {'draft': 'default', 'done': 'default', 'approve': 'success'}}"/>
+            </xpath>
+         </field>
+      </record>
+    
+        
+<!--    search view-->
+     <record id="res_partner_flow_search_view" model="ir.ui.view">
+         <field name="name">res.partner.flow.search.view</field>
+         <field name="model">res.partner</field>
+	     <field name="inherit_id" ref="base.view_res_partner_filter"/>
+         <field name="arch" type="xml">
+            <xpath expr="//filter[@name='customer']" position="after">
+                        <filter string="Draft" name="draft" domain="[('state','=','draft')]"/>
+                        <filter string="Confirmed" name="confirm" domain="[('state','=','confirm')]"/>
+                        <filter string="Approved" name="approve" domain="[('state','=','approve')]"/>
+            </xpath>
+         </field>
+     </record>
+
+
+     <record id="res_partner_inherit_view_xpath" model="ir.ui.view">
+     <field name="name">res.partner.inherit.view.xpath</field>
+     <field name="model">res.partner</field>
+     <field name="inherit_id" ref="base.view_partner_form"/>
+     <field name="arch" type="xml">
+        <xpath expr="//sheet" position='before'>
+                    <header>
+                        <button name="action_confirm" type="object"  string="Confirm" states="draft" class="oe_highlight" groups="dev_customer_flow.can_validate_partner" />
+
+                        <button name="action_approve" type="object"  string="Approve" states="confirm" class="oe_highlight" groups="dev_customer_flow.can_approve_partner" />
+
+                        <button name="action_draft" type="object"  string="Set to Draft" states="confirm,approve" class="oe_highlight" groups="dev_customer_flow.can_approve_partner" />
+
+                        <field name="state" widget="statusbar" attrs="{'readonly': [('state', '=','approve')]}"/>
+                    </header>
+        </xpath>
+        <!--<xpath expr="//field[@name='name']" position="after" >
+                             <h2>
+                                <field name="sequence"/>
+                             </h2>
+        </xpath>-->
+        <xpath expr="//field[@name='function']" position="replace">
+                    <field name="function" placeholder="e.g. Sales Director" attrs="{'invisible': [('is_company','=', True)], 'readonly': [('state', '=','approve')]}"/>
+        </xpath>
+        <xpath expr="//field[@name='type']" position="replace">
+                    <field name="type" attrs="{'invisible': [('parent_id','=', False)], 'readonly': [('state', '=','approve')]}" groups="base.group_no_one"/>
+        </xpath>
+        <!--<xpath expr="//field[@name='is_company']" position="replace">
+                    <field name="is_company" attrs="{'readonly': [('state', '=','approve')]}"/>
+        </xpath>-->
+         <xpath expr="//field[@name='company_type']" position="replace">
+                    <field name="company_type" widget="radio" class="oe_edit_only" options="{'horizontal': true}" attrs="{'readonly': [('state', '=','approve')]}"/>
+         </xpath>
+        <xpath expr="//field[@name='name']" position="replace">
+                    <field name="name" default_focus="1" placeholder="Name" attrs="{'required' : [('type', '=', 'contact')], 'readonly': [('state', '=','approve')]}"/>
+        </xpath>
+        <xpath expr="//field[@name='parent_id']" position="replace">
+                    <field name="parent_id" placeholder="Company" domain="[('is_company', '=', True)]" context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': ['|', '&amp;', ('is_company','=', True),('parent_id', '=', False),('company_name', '!=', False),('company_name', '!=', '')], 'readonly': [('state', '=','approve')]}"/>
+        </xpath>
+        <xpath expr="//field[@name='category_id']" position="replace">
+                    <field name="category_id" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags..." attrs="{'readonly': [('state', '=','approve')]}"/>
+        </xpath>
+        <xpath expr="//field[@name='street']" position="replace">
+                    <field name="street" placeholder="Street..." class="o_address_street" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'readonly': [('state', '=','approve')]}"/>
+        </xpath>
+        <xpath expr="//field[@name='street2']" position="replace">
+                    <field name="street2" placeholder="Street 2..." class="o_address_street" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'readonly': [('state', '=','approve')]}"/>
+        </xpath>
+        <xpath expr="//field[@name='city']" position="replace">
+                    <field name="city" placeholder="City" class="o_address_city" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'readonly': [('state', '=','approve')]}"/>
+        </xpath>
+        <xpath expr="//field[@name='state_id']" position="replace">
+                    <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'readonly': [('state', '=','approve')]}" context="{'country_id': country_id, 'zip': zip}"/>
+        </xpath>
+        <xpath expr="//field[@name='zip']" position="replace">
+                    <field name="zip" placeholder="ZIP" class="o_address_zip" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'readonly': [('state', '=','approve')]}"/>
+        </xpath>
+        <xpath expr="//field[@name='country_id']" position="replace">
+                    <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'readonly': [('state', '=','approve')]}" required="1"/>
+        </xpath>
+        <!--<xpath expr="//field[@name='website']" position="replace">
+                    <field name="website" attrs="{'readonly': [('state', '=','done')]}"/>
+        </xpath>-->
+        <xpath expr="//field[@name='vat']" position="replace">
+                    <field name="vat" placeholder="e.g. BE0477472701" attrs="{'readonly': [('parent_id','!=',False)], 'readonly': [('state', '=','approve')]}"/>
+        </xpath>
+         <xpath expr="//field[@name='phone']" position="replace">
+                    <field name="phone" widget="phone" placeholder="+91" attrs="{'readonly': [('state', '=','approve')]}"/>
+         </xpath>
+         <xpath expr="//field[@name='mobile']" position="replace">
+                    <field name="mobile" widget="phone" placeholder="+91" attrs="{'readonly': [('state', '=','approve')]}"/>
+         </xpath>
+         <xpath expr="//field[@name='warehouse_id']" position="replace">
+                    <field name="warehouse_id" attrs="{'required': [('company_type','=', 'company')]}" />
+         </xpath>
+<!--             <xpath expr="//field[@name='fax']" position="replace">-->
+<!--                        <field name="fax" attrs="{'readonly': [('state', '=','done')]}"/>-->
+<!--            </xpath>-->
+         <xpath expr="//field[@name='email']" position="replace">
+                    <field name="email" widget="email" context="{'gravatar_image': True}" attrs="{'required': [('user_ids','!=', [])], 'readonly': [('state', '=','approve')]}"/>
+        </xpath>
+         <xpath expr="//field[@name='title']" position="replace">
+                    <field name="title" options="{&quot;no_open&quot;: True}" attrs="{'invisible': [('is_company', '=', True)], 'readonly': [('state', '=','approve')]}"/>
+         </xpath>
+         <xpath expr="//field[@name='property_payment_term_id']" position="replace">
+                    <field name="property_payment_term_id" options="{'no_create': True, 'no_open': True}" can_create="true" can_write="true" modifiers="{}" attrs="{'required': [('customer','=', True),('company_type', '=', 'company')]}" />
+         </xpath>
+         <xpath expr="//field[@name='property_supplier_payment_term_id']" position="replace">>
+                    <field name="property_supplier_payment_term_id" widget="selection" can_create="true" can_write="true" modifiers="{}" attrs="{'required': [('supplier','=', True),('company_type', '=', 'company')]}" />
+         </xpath>
+         <xpath expr="//field[@name='industry_id']" position="replace">
+                    <field name="industry_id" attrs="{'invisible': [('is_company', '=', False)], 'required': [('customer','=', True),('is_company', '=', True),('state', '=','confirm')], 'readonly': [('state', '=','approve')]}" options="{'no_create': True}"/>
+         </xpath>
+         <xpath expr="//field[@name='user_id']" position="replace">
+                    <field name="user_id" attrs="{'required': [('customer','=', True),('state', '=','confirm')], 'readonly': [('state', '=','approve')]}"/>
+         </xpath>
+         
+
+  </field>
+      </record>
+</odoo>
+
+

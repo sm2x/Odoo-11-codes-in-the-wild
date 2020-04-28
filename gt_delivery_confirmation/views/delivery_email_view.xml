@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<record id="stock_delivery_one_email_send" model="ir.ui.view">
+	<field name="name">stock.delivery.one.email.send</field>
+	<field name="model">stock.picking</field>
+	<field name="inherit_id" ref="stock.view_picking_form"/>
+	<field name="arch" type="xml">
+			<button name="action_toggle_is_locked" position="after">
+            	<button type ="object" name="single_email" string="Send Email" class="oe_highlight"/>
+            </button>
+	</field>
+	</record>
+
+    <record id="stock_delivery email_notify_action" model="ir.actions.server">
+            <field name="name">Send Email</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+            <field name="binding_model_id" ref="stock.model_stock_picking"/>
+            <field name="code">
+records.multiple_email()
+            </field>
+    </record>
+</odoo>
+
+
+		

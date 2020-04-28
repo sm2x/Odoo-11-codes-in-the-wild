@@ -1,0 +1,30 @@
+table.stockTable {
+  border: 2px solid #FFFFFF;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.stockTable td, table.stockTable th {
+  border: 1px solid #FFFFFF;
+  padding: 3px 4px;
+}
+table.stockTable td {
+  font-size: 15px;
+}
+table.stockTable tr:nth-child(even) {
+  background: #E3E3E3;
+}
+table.stockTable thead {
+  background: #FFFFFF;
+  border-bottom: 4px solid #333333;
+}
+table.stockTable th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  border-left: 2px solid #333333;
+}
+table.stockTable thead th:first-child {
+  border-left: none;
+}

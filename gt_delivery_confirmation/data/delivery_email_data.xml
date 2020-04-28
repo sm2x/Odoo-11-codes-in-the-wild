@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--Email template -->
+        <record id="delivery_order_email_template_completion" model="mail.template">
+            <field name="name">Shipment Notification to Customer - Send by Email</field>
+            <field name="email_from">sales@efficient.co.in</field>
+            <field name="subject">Dispatch Details for your Order ${object.origin} - ${object.company_id.name}</field>
+            <field name="partner_to">${object.partner_id.parent_id.id)}</field>
+            <field name="email_cc">${object.partner_id.parent_id.user_id.login}</field>
+            <field name="reply_to">sales@efficient.co.in</field>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+            <field name="lang">${user.partner_id.lang}</field>
+            <field name="body_html"><![CDATA[
+            <table border="0" width="100%" cellpadding="0" bgcolor="#ededed" style="padding: 20px; background-color: #ededed; border-collapse:separate;" summary="o_mail_notification">
+                    <tbody>
+
+                    <!-- HEADER -->
+                    <tr>
+                        <td align="center" style="min-width: 590px;">
+                            <table width="590" border="0" cellpadding="0" bgcolor="#ffffff" style="min-width: 590px; background-color: #ffffff; padding: 20px; border-collapse:separate;">
+                                <tbody>
+                                    <tr>
+                                        <td valign="middle" align="middle">
+                                            <img src="http://efficient.co.in/web/image/res.company/1/logo?unique=b4ec76d" style="padding: 0px; margin: 0px; height: auto; width: 35%;" class="" data-original-title="" title="">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- CONTENT -->
+                    <tr>
+                        <td align="center" style="min-width: 590px;">
+                            <table width="590" border="0" cellpadding="0" bgcolor="#ffffff" style="min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top" style="font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;">
+                                            <br>
+                                            <h4>
+                                                 Sir/Maam,
+                                            </h4>
+                                            <br>
+                                            <p>
+                                                Below are the shipping details and the items that have been shipped against your order
+                                            </p>
+                                            <br>
+                                            <table class="table table-condensed" style="width: 540px; font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 270px;">
+                                                            Delivery Address
+                                                        </th>
+                                                        <th>
+                                                            Shipment Details
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <p>
+                                                                ${object.partner_id.parent_name or ""}<br>
+                                                                ${object.partner_id.street or ""}
+                                                                ${object.partner_id.street2 or ""}
+                                                                ${object.partner_id.state_id.name or ""} ${object.partner_id.country_id.name or ""} ${object.partner_id.zip}
+                                                            </p>
+                                                            <p>
+                                                                Name: ${object.partner_id.name or ""}
+                                                            </p>
+                                                            <p>
+                                                                Mobile: ${object.partner_id.mobile or ""}
+                                                            </p>
+                                                        </td>
+                                                        <td>
+                                                            <p>
+                                                                Logistics Partner/Transporter/Carrier: <br>
+                                                                <b>${object.carrier_id.name or ""}</b>
+                                                            </p>
+                                                            <p>
+                                                                Tracking Number/Reference:<br>
+                                                                <b>${object.carrier_tracking_ref or ""}</b>
+                                                            </p>
+                                                            <p>
+                                                                Customer Order Reference:<br>
+                                                                <b>${object.sale_id.client_order_ref or ""}</b>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br>
+                                            <b>
+                                                Dispatched Product Details
+                                            </b>
+                                            <br><br>
+
+                                            <div style="display:table;" class="table table-bordered">
+                                                <div style="display:table-header-group;">
+                                                    <div style="display:table-row;">
+                                                        <div style="display:table-cell;"><b>Product Name</b></div>
+                                                        <div style="display:table-cell;"><b>Category</b></div>
+                                                        <div style="display:table-cell;" align="center"><b>Qty Ordered</b></div>
+                                                        <div style="display:table-cell;" align="center"><b>Qty Shipped</b></div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div style="display:table-row-group;">
+                                                    % for row in object.move_lines:
+                                                    <div style="display:table-row;">
+                                                        <div style="display:table-cell;">${row.product_id.name}</div>
+                                                        <div style="display:table-cell;">${row.product_id.categ_id.name}</div>
+                                                        <div style="display:table-cell;" align="center">${row.product_uom_qty} ${row.product_uom.name}</div>
+                                                        <div style="display:table-cell;" align="center"><b>${row.quantity_done} ${row.product_uom.name}</b></div>
+                                                    </div>
+                                                    % endfor
+                                                </div>
+                                            </div>
+
+                                            <br><br><br>
+                                            <p style="text-align: center; ">
+                                                If you have any questions/issues, feel free to contact the customer service on
+                                            </p>
+                                            <br>
+                                            <h4 style="text-align: center; ">
+                                                <b>${object.company_id.phone or ""}</b> <br><br>
+                                                <b>${object.company_id.email or ""}</b>
+                                            </h4>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- FOOTER -->
+                    <tr>
+                        <td align="center" style="min-width: 590px;">
+                            <table width="590" border="0" cellpadding="0" bgcolor="#ffffff" style="min-width: 590px; background-color: #ffffff; padding: 20px; border-collapse:separate;">
+                                <tbody>
+                                    <tr>
+                                        <td valign="middle" align="middle" style="color: #555; padding-top: 10px; padding-bottom: 10px; font-size: 10px;">
+                                                ${object.company_id.name} <br>
+                                                Head Office: <br>
+                                                ${object.company_id.street or ""} <br>
+                                                ${object.company_id.street2 or ""} <br>
+                                                ${object.company_id.city or ''} ${object.company_id.state_id.name or ''} ${object.company_id.zip or ''}
+                                                <br><a href="${object.company_id.website}">${object.company_id.website}</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            ]]></field>
+        </record>
+
+    </data>
+</odoo>

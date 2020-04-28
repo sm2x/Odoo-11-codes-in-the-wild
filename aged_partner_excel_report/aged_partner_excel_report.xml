@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+        <record id="custom_account_aged_balance_view" model="ir.ui.view">
+            <field name="name">custom.account.aged.balance.view</field>
+            <field name="model">account.aged.trial.balance</field>
+            <field name="inherit_id" ref="account.account_aged_balance_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/footer/button[@name='check_report']" position="after">
+                    <button name="print_excel_report" string="Print Excel Report" type="object"  class="oe_highlight"/>
+                        or 
+                </xpath>
+            </field>
+        </record>
+
+		<record id="view_aged_partner_excel" model="ir.ui.view">
+            <field name="name">Aged Partner Report </field>
+            <field name="model">aged.partner.balance.report.excel</field>
+            <field name="arch" type="xml">
+                <form string="Genrated xls File">
+                    <group>
+                        <field name="file_name" invisible="1"/>
+                        <field name="excel_file" readonly="1" filename="file_name"/>
+                    </group>
+                </form>
+            </field>
+     </record>
+
+        <record id="action_aged_partner_excel" model="ir.actions.act_window">
+            <field name="name">Aged Partner  Report </field>
+            
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="res_model">aged.partner.balance.report.excel</field>
+            <field name="target">new</field>
+        </record>
+		
+    </data>
+</openerp>
