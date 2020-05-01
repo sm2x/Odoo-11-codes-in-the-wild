@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6a75b10f-a8ba-46a3-93f8-4e6620d9e035" name="Default Changelist" comment="Addon Commit">
+      <change afterPath="$PROJECT_DIR$/.idea/inflow.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bA2S6ou03hNekG7xAn2HkmzrUr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a75b10f-a8ba-46a3-93f8-4e6620d9e035" name="Default Changelist" comment="" />
+      <created>1588060574212</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588060574212</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Addon Commit">
+      <created>1588060745804</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588060745804</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Addon Commit">
+      <created>1588062515982</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588062515982</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Addon Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Addon Commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="307" y="23" width="825" height="813" key="CommitChangelistDialog2" timestamp="1588062512176">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state x="307" y="23" width="825" height="813" key="CommitChangelistDialog2/0.23.1440.813@0.23.1440.813" timestamp="1588062512176" />
+    <state x="229" y="68" key="SettingsEditor" timestamp="1588300013648">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state x="229" y="68" key="SettingsEditor/0.23.1440.813@0.23.1440.813" timestamp="1588300013648" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1588062541348">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.23.1440.813@0.23.1440.813" timestamp="1588062541348" />
+    <state x="531" y="170" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1588062357591">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state x="531" y="170" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.23.1440.813@0.23.1440.813" timestamp="1588062357591" />
+  </component>
+</project>
