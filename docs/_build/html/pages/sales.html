@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sales &mdash; EDPL ERP Workflow 1.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Use Quotation Templates" href="sales/quotation_templates.html" />
+    <link rel="prev" title="Get organized by planning activities" href="crm/get_organized_by_planing_activities.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> EDPL ERP Workflow
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="crm.html">Customer Relationship Management</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#send-quotations">Send Quotations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sales/quotation_templates.html">Use Quotation Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/suggested_products.html">Suggested Products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/online_signature.html">Online Signature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/get_paid.html">Request a DownPayment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/quotation_deadline.html">Quotation Deadline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/billing_shipping_address.html">Billing and Shipping Address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/terms_and_conditions.html">Order Terms and Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#invoicing-method">Invoicing Method</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sales/invoice_delivered_qty.html">Invoice on Delivered or Ordered Quantities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/down_payment.html">Down Payment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/proforma.html">Send a Proforma Invoice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/inv_time_materials.html">Invoice based on Time and Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/project_milestone.html">Invoice Project Milestone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/reinvoice_expenses.html">Re-Invoice Expenses to Customers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sales/sell_subscriptions.html">Sell subscriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#products-prices">Products &amp; Prices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manage-your-products">Manage your products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sales/import_products.html">Import products with categories and variants</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#set-taxes">Set taxes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sales/set_default_taxes.html">Set Default Taxes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sales/adapt_taxes.html">Adapt Taxes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sales/b2b_b2c_tax.html">Tax Included and Excluded Price</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sales/pricing.html">Managing your Pricing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sales/adapt_pricing_for_customers.html">Pricing for Customers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sales/foreign_currency.html">Sell in Foreign Currency</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ebay">eBay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-topics">Advanced Topics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="purchases.html">Purchases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inventory.html">Inventory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accounting.html">Accounting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpdesk.html">Helpdesk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expenses.html">Expenses</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EDPL ERP Workflow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Sales</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pages/sales.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sales">
+<h1>Sales<a class="headerlink" href="#sales" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="send-quotations">
+<h2>Send Quotations<a class="headerlink" href="#send-quotations" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sales/quotation_templates.html">Use Quotation Templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sales/quotation_templates.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sales/quotation_templates.html#create-your-first-template">Create your first template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sales/quotation_templates.html#edit-your-template">Edit your template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sales/quotation_templates.html#use-a-quotation-template">Use a quotation template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sales/quotation_templates.html#confirm-the-quotation">Confirm the quotation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sales/suggested_products.html">Suggested Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/online_signature.html">Online Signature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/get_paid.html">Request a DownPayment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sales/get_paid.html#activate-online-payment">Activate online payment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sales/get_paid.html#register-a-payment">Register a payment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sales/quotation_deadline.html">Quotation Deadline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/billing_shipping_address.html">Billing and Shipping Address</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/terms_and_conditions.html">Order Terms and Conditions</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="invoicing-method">
+<h2>Invoicing Method<a class="headerlink" href="#invoicing-method" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sales/invoice_delivered_qty.html">Invoice on Delivered or Ordered Quantities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/down_payment.html">Down Payment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/proforma.html">Send a Proforma Invoice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/inv_time_materials.html">Invoice based on Time and Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/project_milestone.html">Invoice Project Milestone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/reinvoice_expenses.html">Re-Invoice Expenses to Customers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/sell_subscriptions.html">Sell subscriptions</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="products-prices">
+<h2>Products &amp; Prices<a class="headerlink" href="#products-prices" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="manage-your-products">
+<h3>Manage your products<a class="headerlink" href="#manage-your-products" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sales/import_products.html">Import products with categories and variants</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="set-taxes">
+<h3>Set taxes<a class="headerlink" href="#set-taxes" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sales/set_default_taxes.html">Set Default Taxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/adapt_taxes.html">Adapt Taxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/b2b_b2c_tax.html">Tax Included and Excluded Price</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/pricing.html">Managing your Pricing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/adapt_pricing_for_customers.html">Pricing for Customers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sales/foreign_currency.html">Sell in Foreign Currency</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="ebay">
+<h2>eBay<a class="headerlink" href="#ebay" title="Permalink to this headline">¶</a></h2>
+<p>How to configure eBay in Odoo?
+How to list a product?</p>
+</div>
+<div class="section" id="advanced-topics">
+<h2>Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">¶</a></h2>
+<p>How to give portal access rights to my customers?</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sales/quotation_templates.html" class="btn btn-neutral float-right" title="Use Quotation Templates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="crm/get_organized_by_planing_activities.html" class="btn btn-neutral float-left" title="Get organized by planning activities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Vaibhav Misra
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
